@@ -1,0 +1,111 @@
+/* ===== Page Setup ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header & Footer ===== */
+header, footer {
+  text-align: center;
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+footer {
+  margin-top: auto; /* Keeps footer at the bottom */
+  font-size: 0.9rem;
+}
+
+/* ===== Main Section ===== */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;      /* Vertically centers */
+  justify-content: center;  /* Horizontally centers */
+}
+
+/* ===== Container ===== */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* ===== Common Box Styles ===== */
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for interaction */
+.box:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== Box Variations ===== */
+
+/* Box 1 — fixed px size */
+.box1 {
+  width: 250px;
+  height: 200px;
+  background-color: #3498db;
+}
+
+/* Box 2 — percentage + viewport height */
+.box2 {
+  width: 30%;
+  height: 30vh;
+  min-width: 200px;
+  background-color: #e67e22;
+}
+
+/* Box 3 — em sizing + constraints + overflow */
+.box3 {
+  width: 20em;
+  min-height: 10em;
+  max-width: 400px;
+  background-color: #27ae60;
+  overflow: auto; /* Allows scrolling if content overflows */
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .box {
+    width: 80%;
+    max-width: none;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+}

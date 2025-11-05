@@ -1,0 +1,146 @@
+/* =========================================
+   Base Setup and Global Styling
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #333;
+}
+
+/* =========================================
+   Header & Footer Styling
+   ========================================= */
+header, footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+header { top: 0; }
+footer { bottom: 0; }
+
+main {
+  flex: 1;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* =========================================
+   Typography Demonstration Article
+   ========================================= */
+.typography-demo {
+  max-width: 800px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.8; /* improves readability */
+  letter-spacing: 0.5px;
+  text-align: justify;
+}
+
+/* Headings with hierarchy */
+h2 {
+  font-family: "Merriweather", serif;
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Paragraph variations for font family and weight */
+.typography-demo p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.typography-demo p.variation {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* =========================================
+   Inline Text Styling
+   ========================================= */
+
+/* Highlighted text */
+mark {
+  background-color: #ffef96;
+  color: #000;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* Bold text */
+strong {
+  color: #0077ff;
+  font-weight: 600;
+}
+
+/* Emphasized text (italic) */
+em {
+  color: #e63946;
+  font-style: italic;
+}
+
+/* =========================================
+   Pseudo-elements
+   ========================================= */
+
+/* ::first-letter — emphasize the first letter of the first paragraph */
+.typography-demo p:first-of-type::first-letter {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0077ff;
+}
+
+/* ::first-line — style the first line of the last paragraph */
+.typography-demo p:last-of-type::first-line {
+  font-weight: bold;
+  color: #444;
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+@media (max-width: 768px) {
+  .typography-demo {
+    padding: 20px;
+    font-size: 1rem;
+  }
+  header, footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .typography-demo {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}

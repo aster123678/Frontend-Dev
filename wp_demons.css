@@ -1,0 +1,163 @@
+/* ================================
+   Base Setup & Layout Structure
+   ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f7f9fb;
+  color: #333;
+}
+
+header, footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+header { top: 0; }
+footer { bottom: 0; }
+
+main {
+  flex: 1;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ================================
+   1️⃣ Attribute Selectors
+   ================================ */
+
+/* [type="text"] — Selects input fields of type text */
+input[type="text"] {
+  border: 2px solid #4a90e2;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* [href^="https"] — Selects links that start with https */
+a[href^="https"] {
+  color: green;
+  font-weight: bold;
+}
+
+/* [href^="http"] — Selects links that start with http (non-secure) */
+a[href^="http:"] {
+  color: red;
+}
+
+/* ================================
+   2️⃣ Pseudo-classes & Pseudo-elements
+   ================================ */
+
+/* :hover — Changes link color on hover */
+a:hover {
+  text-decoration: underline;
+}
+
+/* :focus — Highlights input when focused */
+input:focus {
+  outline: 3px solid #ffa600;
+}
+
+/* :nth-child() — Styles specific list items */
+.pseudo-list li:nth-child(2) {
+  color: #0077ff;
+}
+.pseudo-list li:nth-child(odd) {
+  background: #eaf3ff;
+}
+
+/* ::before & ::after — Adds decorative elements */
+.pseudo-text::before {
+  content: "✨ ";
+}
+.pseudo-text::after {
+  content: " ✨";
+}
+
+/* ================================
+   3️⃣ Combinators
+   ================================ */
+
+/* Descendant selector: all <p> inside .container */
+.container p {
+  color: #444;
+}
+
+/* Child combinator (>) — only direct children of .box */
+.box > p {
+  font-weight: bold;
+  color: #222;
+}
+
+/* Adjacent sibling (+) — next element immediately after .box */
+.box + p {
+  color: #0077ff;
+  font-style: italic;
+}
+
+/* General sibling (~) — all siblings after .box */
+.box ~ span {
+  color: #ff4f4f;
+}
+
+/* ================================
+   Section Styling
+   ================================ */
+section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  color: #111;
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  header, footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.1rem;
+  }
+  input, a {
+    font-size: 0.9rem;
+  }
+}
