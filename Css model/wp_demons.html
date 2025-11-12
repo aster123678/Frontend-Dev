@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced CSS Selectors Demonstration</title>
+  <link rel="stylesheet" href="wp_demons.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Advanced CSS Selectors Demo</h1>
+  </header>
+
+  <main>
+    <section class="selectors-demo">
+      <h2>1️⃣ Attribute Selectors</h2>
+      <p>Examples of styling elements based on attributes:</p>
+      <form>
+        <input type="text" placeholder="Name (styled using [type='text'])" />
+        <input type="email" placeholder="Email (not styled)" />
+      </form>
+
+      <ul class="links">
+        <li><a href="https://example.com">Secure Link (https)</a></li>
+        <li><a href="http://example.com">Non-secure Link (http)</a></li>
+      </ul>
+    </section>
+
+    <section class="pseudo-demo">
+      <h2>2️⃣ Pseudo-classes & Pseudo-elements</h2>
+      <ul class="pseudo-list">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Fourth item</li>
+      </ul>
+
+      <p class="pseudo-text">
+        This paragraph uses <code>::before</code> and <code>::after</code> pseudo-elements to add decorations.
+      </p>
+    </section>
+
+    <section class="combinators-demo">
+      <h2>3️⃣ Combinator Selectors</h2>
+      <div class="container">
+        <p>Direct child (>) selector demo:</p>
+        <div class="box">
+          <p>This paragraph is a direct child of .box</p>
+          <span>Sibling selectors (+ and ~) will style this differently!</span>
+        </div>
+        <p>This is another paragraph next to .box</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Jai — All Rights Reserved © 2025</p>
+  </footer>
+
+</body>
+</html>

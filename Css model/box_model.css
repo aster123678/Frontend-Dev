@@ -1,0 +1,111 @@
+/* ===============================
+   General Layout & Typography
+================================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafc;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+/* Main */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+/* ===============================
+   Box Model Demonstration
+================================*/
+.box-model-demo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.box {
+  width: 220px;
+  height: 220px;
+  background-color: #fff;
+  border: 5px solid #4e54c8;
+  padding: 20px;
+  margin: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+/* Default Box (content-box) */
+.default-box {
+  box-sizing: content-box;
+  background-color: #dbe4ff;
+}
+
+/* Border-Box */
+.border-box {
+  box-sizing: border-box;
+  background-color: #c8e6c9;
+}
+
+/* Description */
+.description {
+  max-width: 700px;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ===============================
+   Footer (Sticky at Bottom)
+================================*/
+footer {
+  background: #4e54c8;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: auto;
+}
+
+/* ===============================
+   Responsive Design
+================================*/
+@media (max-width: 768px) {
+  .box-model-demo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 80%;
+    height: auto;
+  }
+}

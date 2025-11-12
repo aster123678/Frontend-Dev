@@ -1,0 +1,136 @@
+/* ===================================
+   Base Reset & Global Styling
+   =================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f4f6f8;
+  color: #333;
+}
+
+/* ===================================
+   Header & Footer
+   =================================== */
+header, footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+}
+
+header { top: 0; }
+footer { bottom: 0; }
+
+main {
+  flex: 1;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===================================
+   Transformation Section
+   =================================== */
+.transform-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Individual Transformation Boxes */
+.transform-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 200px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+/* Shape inside each box */
+.shape {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+
+/* Label below shape */
+.transform-box p {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #222;
+}
+
+/* ===================================
+   Hover Transformations
+   =================================== */
+
+/* rotate() */
+.rotate:hover .shape {
+  transform: rotate(45deg);
+}
+
+/* scale() */
+.scale:hover .shape {
+  transform: scale(1.2);
+}
+
+/* translate() */
+.translate:hover .shape {
+  transform: translate(20px, -10px);
+}
+
+/* skew() */
+.skew:hover .shape {
+  transform: skew(15deg, 10deg);
+}
+
+/* ===================================
+   Responsive Design
+   =================================== */
+@media (max-width: 900px) {
+  .transform-section {
+    gap: 20px;
+  }
+  .transform-box {
+    width: 160px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .transform-section {
+    flex-direction: column;
+  }
+  .transform-box {
+    width: 80%;
+  }
+  header, footer {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}

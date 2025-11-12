@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivika Jain - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 2.5rem;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.1rem;
+    }
+
+    .section-hero {
+      background-color: #434362;
+      color: #c125af;
+    }
+
+    .section-about {
+      background-color: #29c1d5;
+      color: #2c2c2c;
+    }
+
+    .section-skills {
+      background-color: #056c6a;
+      color: #f9f9f9;
+    }
+
+    .section-projects {
+      background-color: #e7dcd5;
+      color: #2b2b2b;
+    }
+
+    .section-resume {
+      background-color: #f5ebe0;
+      color: #2b2b2b;
+    }
+
+    .section-contact {
+      background-color: #dadbd6;
+      color: #2b2b2b;
+    }
+
+    .skills, .projects {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .button {
+      background: #b89b82;
+      color: white;
+      padding: 1.0rem 2.0rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="section-hero">
+    <h1>Shivika Jain</h1>
+    <p>✨ Full Stack Developer | AI Explorer | Clean UI Enthusiast</p>
+  </section>
+
+  <section class="section-about">
+    <h2>About Me</h2>
+    <p>I'm Shivika Jain, a Computer Science student at GLA University with a passion for turning ideas into impactful digital experiences. I thrive at the intersection of technology and creativity — whether it's building AI-powered tools, designing clean user interfaces, or solving real-world problems through code. My work is driven by curiosity, empathy, and a love for creating things that not only work but also feel meaningful. Outside of coding, I enjoy participating in hackathons, mentoring peers, and exploring minimal, aesthetic design trends that inspire fresh perspectives in tech.</p>
+  </section>
+
+  <section class="section-skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">Python</div>
+      <div class="card">Java</div>
+      <div class="card">SQL</div>
+      <div class="card">HTML/CSS</div>
+      <div class="card">React</div>
+      <div class="card">Streamlit</div>
+      <div class="card">Tailwind</div>
+      <div class="card">GitHub</div>
+    </div>
+  </section>
+
+  <section class="section-projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>CareerSeed</h3>
+        <p>AI-powered resume enhancer using LLaMA and Streamlit. Scores ATS & recommends jobs/courses.</p>
+        <a href="https://github.com/shivikajain/careerseed" target="_blank">View on GitHub</a>
+      </div>
+      <div class="card">
+        <h3>Gesture AI</h3>
+        <p>Hand gesture-based control system for accessibility using OpenCV + AI.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-resume">
+    <h2>Resume</h2>
+    <p>Want to know more about me?</p>
+    <a href="Shivika_Resume.pdf" class="button" target="_blank">Download Resume</a>
+  </section>
+
+  <section class="section-contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:shivika@example.com">shivika@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/shivikajain" target="_blank">linkedin.com/in/shivikajain</a></p>
+    <p>GitHub: <a href="https://github.com/shivikajain" target="_blank">github.com/shivikajain</a></p>
+  </section>
+</body>
+</html>

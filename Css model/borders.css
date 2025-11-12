@@ -1,0 +1,109 @@
+/* ===== General Page Styling ===== */
+html, body {
+  height: 100%; /* ✅ Ensures full viewport height for flex container */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* ✅ Enables sticky footer layout */
+}
+
+/* ===== Header and Footer ===== */
+header, footer {
+  text-align: center;
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* ===== Main Section ===== */
+main {
+  flex: 1; /* ✅ Pushes footer to bottom */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ===== Flex Container ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ===== Common Box Styling ===== */
+.box {
+  background-color: white;
+  flex: 1 1 250px;
+  max-width: 280px;
+  min-width: 220px;
+  padding: 20px;
+  border: 3px solid #000;
+  border-radius: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* ===== Border Styles ===== */
+.solid { border-style: solid; }
+.dashed { border-style: dashed; padding: 15px 30px 10px 40px; }
+.double { border-style: double; border-radius: 15px; }
+.groove { border-style: groove; padding: 40px; border-radius: 25px; }
+
+/* ===== Hover Effect ===== */
+.box:hover {
+  border-color: #3498db;
+  transform: translateY(-5px);
+}
+
+/* ===== Footer ===== */
+footer {
+  font-size: 0.9rem;
+  margin-top: auto; /* ✅ Ensures footer sticks to bottom */
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .container {
+    justify-content: center;
+  }
+  .box {
+    max-width: 45%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    width: 90%;
+    max-width: none;
+  }
+  header h1 {
+    font-size: 1.4rem;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+}
