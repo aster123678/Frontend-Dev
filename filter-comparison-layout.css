@@ -1,6 +1,4 @@
-/* ===============================
-   BASIC STYLES
-================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,9 +15,7 @@ body {
   min-height: 100vh;
 }
 
-/* ===============================
-   HEADER
-================================= */
+
 header {
   background: #1e293b;
   color: white;
@@ -27,9 +23,7 @@ header {
   padding: 1rem;
 }
 
-/* ===============================
-   MAIN COMPARISON SECTION
-================================= */
+
 main {
   flex: 1;
   display: flex;
@@ -59,12 +53,12 @@ main {
   transition: filter 0.5s ease, transform 0.3s ease;
 }
 
-/* Filtered Image Effect */
+
 .filtered img {
   filter: brightness(60%);
 }
 
-/* Hover Effect - Remove Filter Smoothly */
+
 .filtered img:hover {
   filter: brightness(100%);
   transform: scale(1.02);
@@ -77,9 +71,7 @@ figcaption {
   color: #555;
 }
 
-/* ===============================
-   FOOTER
-================================= */
+
 footer {
   background: #1e293b;
   color: white;
@@ -87,9 +79,7 @@ footer {
   padding: 0.75rem;
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-================================= */
+
 @media (max-width: 700px) {
   .comparison-container {
     flex-direction: column;
@@ -104,3 +94,4 @@ footer {
     font-size: 0.95rem;
   }
 }
+
