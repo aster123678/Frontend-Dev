@@ -1,6 +1,4 @@
-/* ===============================
-   GENERAL STYLES
-================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,9 +12,6 @@ body {
   color: #333;
 }
 
-/* ===============================
-   HEADER
-================================= */
 header {
   display: flex;
   justify-content: space-between;
@@ -48,9 +43,6 @@ nav a:hover {
   color: #38bdf8;
 }
 
-/* ===============================
-   MAIN LAYOUT (GRID)
-================================= */
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -58,9 +50,7 @@ main {
   padding: 2rem;
 }
 
-/* ===============================
-   IMAGE GALLERY
-================================= */
+
 .gallery h2 {
   margin-bottom: 1rem;
   text-align: center;
@@ -84,9 +74,7 @@ main {
   filter: none;
 }
 
-/* ===============================
-   TEXT SECTION
-================================= */
+
 .text-section {
   background: #e2e8f0;
   padding: 1.5rem;
@@ -99,9 +87,7 @@ main {
   transform: scale(1.02);
 }
 
-/* ===============================
-   CHEAT SHEET SECTION
-================================= */
+
 .cheat-sheet {
   text-align: center;
 }
@@ -126,9 +112,7 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ===============================
-   FOOTER
-================================= */
+
 footer {
   background: #1e293b;
   color: white;
@@ -137,9 +121,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* ===============================
-   ANIMATIONS
-================================= */
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -153,9 +135,7 @@ footer {
   }
 }
 
-/* ===============================
-   MEDIA QUERIES
-================================= */
+
 @media (max-width: 700px) {
   main {
     grid-template-columns: 1fr;
@@ -167,3 +147,4 @@ footer {
     gap: 0.5rem;
   }
 }
+
