@@ -1,6 +1,3 @@
-/* ================================
-   Base Setup & Layout Structure
-   ================================ */
 * {
   margin: 0;
   padding: 0;
@@ -41,11 +38,6 @@ main {
   gap: 40px;
 }
 
-/* ================================
-   1️⃣ Attribute Selectors
-   ================================ */
-
-/* [type="text"] — Selects input fields of type text */
 input[type="text"] {
   border: 2px solid #4a90e2;
   padding: 10px;
@@ -53,32 +45,23 @@ input[type="text"] {
   margin: 10px 0;
 }
 
-/* [href^="https"] — Selects links that start with https */
 a[href^="https"] {
   color: green;
   font-weight: bold;
 }
 
-/* [href^="http"] — Selects links that start with http (non-secure) */
 a[href^="http:"] {
   color: red;
 }
 
-/* ================================
-   2️⃣ Pseudo-classes & Pseudo-elements
-   ================================ */
-
-/* :hover — Changes link color on hover */
 a:hover {
   text-decoration: underline;
 }
 
-/* :focus — Highlights input when focused */
 input:focus {
   outline: 3px solid #ffa600;
 }
 
-/* :nth-child() — Styles specific list items */
 .pseudo-list li:nth-child(2) {
   color: #0077ff;
 }
@@ -86,43 +69,29 @@ input:focus {
   background: #eaf3ff;
 }
 
-/* ::before & ::after — Adds decorative elements */
 .pseudo-text::before {
-  content: "✨ ";
 }
 .pseudo-text::after {
-  content: " ✨";
 }
 
-/* ================================
-   3️⃣ Combinators
-   ================================ */
-
-/* Descendant selector: all <p> inside .container */
 .container p {
   color: #444;
 }
 
-/* Child combinator (>) — only direct children of .box */
 .box > p {
   font-weight: bold;
   color: #222;
 }
 
-/* Adjacent sibling (+) — next element immediately after .box */
 .box + p {
   color: #0077ff;
   font-style: italic;
 }
 
-/* General sibling (~) — all siblings after .box */
 .box ~ span {
   color: #ff4f4f;
 }
 
-/* ================================
-   Section Styling
-   ================================ */
 section {
   background: #fff;
   padding: 25px;
@@ -136,9 +105,6 @@ h2 {
   color: #111;
 }
 
-/* ================================
-   Responsive Design
-   ================================ */
 @media (max-width: 768px) {
   main {
     padding: 15px;
@@ -161,3 +127,4 @@ h2 {
     font-size: 0.9rem;
   }
 }
+
