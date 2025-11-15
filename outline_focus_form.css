@@ -1,7 +1,3 @@
-/* ===============================
-   Base Layout & Typography
-================================*/
-* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -16,7 +12,6 @@ body {
   flex-direction: column;
 }
 
-/* Header */
 header {
   background: linear-gradient(135deg, #43cea2, #185a9d);
   color: white;
@@ -24,9 +19,6 @@ header {
   padding: 1.5em 0;
 }
 
-/* ===============================
-   Form Section
-================================*/
 main {
   flex: 1;
   display: flex;
@@ -50,7 +42,6 @@ form {
   gap: 1.2em;
 }
 
-/* Form Group */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -61,7 +52,6 @@ label {
   margin-bottom: 0.5em;
 }
 
-/* Inputs and Textarea */
 input,
 textarea {
   padding: 0.75em;
@@ -73,7 +63,6 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* Demonstrating outline styles */
 input[type="text"] {
   outline: 2px dashed #185a9d;
 }
@@ -86,7 +75,6 @@ textarea {
   outline: 2px double #999;
 }
 
-/* Focus States */
 input:focus,
 textarea:focus {
   outline-color: #43cea2;
@@ -95,7 +83,6 @@ textarea:focus {
   box-shadow: 0 0 10px rgba(67, 206, 162, 0.4);
 }
 
-/* Button */
 button {
   background: linear-gradient(135deg, #43cea2, #185a9d);
   color: white;
@@ -111,9 +98,6 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* ===============================
-   Footer (Sticky)
-================================*/
 footer {
   background: #185a9d;
   color: white;
@@ -123,9 +107,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===============================
-   Responsive Design
-================================*/
 @media (max-width: 600px) {
   .form-section {
     width: 90%;
@@ -136,3 +117,4 @@ footer {
     font-size: 0.95rem;
   }
 }
+
