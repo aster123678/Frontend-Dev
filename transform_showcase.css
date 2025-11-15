@@ -1,6 +1,3 @@
-/* ===================================
-   Base Reset & Global Styling
-   =================================== */
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +14,6 @@ html, body {
   color: #333;
 }
 
-/* ===================================
-   Header & Footer
-   =================================== */
 header, footer {
   background: #222;
   color: #fff;
@@ -43,9 +37,6 @@ main {
   align-items: center;
 }
 
-/* ===================================
-   Transformation Section
-   =================================== */
 .transform-section {
   display: flex;
   justify-content: center;
@@ -55,7 +46,6 @@ main {
   padding: 20px;
 }
 
-/* Individual Transformation Boxes */
 .transform-box {
   display: flex;
   flex-direction: column;
@@ -69,7 +59,6 @@ main {
   transition: all 0.4s ease;
 }
 
-/* Shape inside each box */
 .shape {
   width: 100px;
   height: 100px;
@@ -78,40 +67,29 @@ main {
   transition: all 0.4s ease;
 }
 
-/* Label below shape */
 .transform-box p {
   margin-top: 15px;
   font-weight: bold;
   color: #222;
 }
 
-/* ===================================
-   Hover Transformations
-   =================================== */
 
-/* rotate() */
 .rotate:hover .shape {
   transform: rotate(45deg);
 }
 
-/* scale() */
 .scale:hover .shape {
   transform: scale(1.2);
 }
 
-/* translate() */
 .translate:hover .shape {
   transform: translate(20px, -10px);
 }
 
-/* skew() */
 .skew:hover .shape {
   transform: skew(15deg, 10deg);
 }
 
-/* ===================================
-   Responsive Design
-   =================================== */
 @media (max-width: 900px) {
   .transform-section {
     gap: 20px;
@@ -134,3 +112,4 @@ main {
     padding: 10px;
   }
 }
+
