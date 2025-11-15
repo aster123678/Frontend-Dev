@@ -11,7 +11,6 @@ header h1 {
     color: white;
 }
 
-/* Team container using flex */
 .team-container {
     display: flex;
     justify-content: center;
@@ -20,7 +19,6 @@ header h1 {
     flex-wrap: wrap;
 }
 
-/* Card styling */
 .team-card {
     background-color: white;
     border: 2px solid #ccc;
@@ -35,16 +33,15 @@ header h1 {
     transform: translateY(-5px);
 }
 
-/* Highlight team lead */
 .highlight {
     background-color: #ffeb3b;
     border-color: #fbc02d;
 }
 
-/* Responsive layout */
 @media screen and (max-width: 600px) {
     .team-container {
         flex-direction: column;
         align-items: center;
     }
 }
+
