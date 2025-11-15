@@ -1,4 +1,3 @@
-/* ===== General Styles ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -10,7 +9,6 @@ body {
   color: #333;
 }
 
-/* ===== Header ===== */
 header {
   background-color: #2563eb;
   color: white;
@@ -18,7 +16,6 @@ header {
   padding: 1.5rem 0;
 }
 
-/* ===== Main Container ===== */
 .ui-container {
   flex: 1;
   display: flex;
@@ -27,7 +24,6 @@ header {
   padding: 2rem;
 }
 
-/* ===== Card Container ===== */
 .ui-card {
   background-color: white;
   padding: 2rem 3rem;
@@ -46,14 +42,12 @@ header {
   color: #1e3a8a;
 }
 
-/* ===== UI Items ===== */
 .ui-item {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-/* ===== Inputs and Select ===== */
 input[type="text"],
 select {
   padding: 0.7rem 1rem;
@@ -71,7 +65,6 @@ select:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
 }
 
-/* ===== Buttons ===== */
 .button-group {
   display: flex;
   gap: 1rem;
@@ -102,7 +95,6 @@ select:focus {
   color: #2563eb;
 }
 
-/* Hover and Active States */
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -116,7 +108,6 @@ select:focus {
   outline: 2px solid #93c5fd;
 }
 
-/* ===== Footer ===== */
 footer {
   background-color: #1e3a8a;
   color: white;
@@ -126,7 +117,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===== Responsive Design ===== */
 @media (max-width: 600px) {
   .ui-card {
     padding: 1.5rem;
@@ -140,3 +130,4 @@ footer {
     width: 100%;
   }
 }
+
