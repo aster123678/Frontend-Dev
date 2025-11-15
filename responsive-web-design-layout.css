@@ -1,6 +1,4 @@
-/* =========================================
-   Global & Reset Styles
-   ========================================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,9 +14,7 @@ body {
   min-height: 100vh;
 }
 
-/* =========================================
-   Header Styles
-   ========================================= */
+
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -50,9 +46,7 @@ body {
   color: #f0c330;
 }
 
-/* =========================================
-   Main Section Styles
-   ========================================= */
+
 .features {
   display: flex;
   justify-content: center;
@@ -90,9 +84,7 @@ body {
   line-height: 1.5;
 }
 
-/* =========================================
-   Footer Styles
-   ========================================= */
+
 .site-footer {
   text-align: center;
   background-color: #1e1e1e;
@@ -102,9 +94,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* =========================================
-   Responsive Design
-   ========================================= */
+
 @media (max-width: 750px) {
   .features {
     flex-direction: column;
@@ -115,3 +105,4 @@ body {
     width: 90%;
   }
 }
+
