@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        
+        .mainText {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .mainDiv {
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+        }
+        #mouseHover {
+            padding: 0px 25px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        .clickHere {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .changesDiv {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        #form{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="mainText"> Click To see changes</h2>
+    <div class="mainDiv">
+        <div id="mouseHover">
+            <h2 class="clickHere"> Click Here</h2>
+        </div>
+    </div>
+    <h2 class="changesDiv"> Login Form</h2>
+    <div class="'formdiv">
+    <form id="form">
+        <label >Name: </label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <br><br>
+        <label >password: </label>
+        <input type="text" id="password" placeholder="Enter password">
+        <br><br>
+        <label>Email: </label>
+        <input type="email" id="emailInput" placeholder="Enter your email">
+        <br><br>
+        <button>submit</button><br><br>
+        <h1 id="output"></h1>
+    </form>
+    
+    </div>  
+    <script src="demo.js"></script>
+</body>
+</html>
