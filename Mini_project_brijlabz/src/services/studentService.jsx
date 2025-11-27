@@ -37,3 +37,4 @@ export async function getStudentById(id) {
   if (!res.ok) throw new Error("Failed to load student details");
   return res.json();
 }
+
