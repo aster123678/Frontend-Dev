@@ -2,22 +2,63 @@ import React from "react";
 
 function StudentList({
   students,
+  searchText,
+  onSearchChange,
   onLoad,
   onAdd,
   onEdit,
   onDelete,
   onViewDetails,
+  onSortByName,
+  onSortByMarks,
 }) {
-  return (
-    <div>
-      <h2>Student List</h2>
-      <button onClick={onLoad}>Load Students</button>
-      <button onClick={onAdd}>Add Student</button>
+  const normalized = searchText.trim().toLowerCase();
+  const filteredStudents =
+    normalized.length === 0
+      ? students
+      : students.filter((s) => {
+          return (
+            s.name.toLowerCase().includes(normalized) ||
+            s.section.toLowerCase().includes(normalized)
+          );
+        });
 
-      {students.length === 0 ? (
-        <p>No students loaded.</p>
+  return (
+    <div className="card">
+      <div className="card-header">
+        <h2 className="section-title">Student List</h2>
+        <div>
+          <button className="btn btn-primary" onClick={onLoad}>
+            Load Students
+          </button>
+          <button className="btn btn-outline" onClick={onAdd}>
+            Add Student
+          </button>
+        </div>
+      </div>
+
+      <div className="toolbar">
+        <input
+          className="input search-input"
+          type="text"
+          placeholder="Search by name or section..."
+          value={searchText}
+          onChange={(e) => onSearchChange(e.target.value)}
+        />
+        <div>
+          <button className="btn btn-small btn-outline" onClick={onSortByName}>
+            Sort by Name
+          </button>
+          <button className="btn btn-small btn-outline" onClick={onSortByMarks}>
+            Sort by Marks
+          </button>
+        </div>
+      </div>
+
+      {filteredStudents.length === 0 ? (
+        <p className="muted">No students to show.</p>
       ) : (
-        <table border="1" cellPadding="8">
+        <table className="student-table">
           <thead>
             <tr>
               <th>ID</th>
@@ -29,7 +70,7 @@ function StudentList({
             </tr>
           </thead>
           <tbody>
-            {students.map((s) => (
+            {filteredStudents.map((s) => (
               <tr key={s.id}>
                 <td>{s.id}</td>
                 <td>{s.name}</td>
@@ -37,9 +78,24 @@ function StudentList({
                 <td>{s.marks}</td>
                 <td>{s.grade}</td>
                 <td>
-                  <button onClick={() => onEdit(s)}>Edit</button>
-                  <button onClick={() => onDelete(s.id)}>Delete</button>
-                  <button onClick={() => onViewDetails(s)}>View</button>
+                  <button
+                    className="btn btn-small"
+                    onClick={() => onEdit(s)}
+                  >
+                    Edit
+                  </button>
+                  <button
+                    className="btn btn-small btn-danger"
+                    onClick={() => onDelete(s.id)}
+                  >
+                    Delete
+                  </button>
+                  <button
+                    className="btn btn-small btn-outline"
+                    onClick={() => onViewDetails(s)}
+                  >
+                    View
+                  </button>
                 </td>
               </tr>
             ))}
